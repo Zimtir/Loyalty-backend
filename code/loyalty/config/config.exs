@@ -9,56 +9,27 @@
 # move said applications out of the umbrella.
 import Config
 
-config :web,
-  generators: [context_app: false, binary_id: true]
-
-# Configures the endpoint
-config :web, Web.Endpoint,
-  url: [host: "localhost"],
-  secret_key_base: "gtqhC9IyJDhZwPkPqix6SNVaKOgS7SWdBqgmJwjknc/GCg3iWHBPX0Fd+j9CTh/o",
-  render_errors: [view: Web.ErrorView, accepts: ~w(json), layout: false],
-  pubsub_server: Web.PubSub,
-  live_view: [signing_salt: "x0EprhG/"]
-
-config :web,
-  ecto_repos: [Web.Repo],
-  generators: [context_app: false, binary_id: true]
-
-# Configures the endpoint
-config :web, Web.Endpoint,
-  url: [host: "localhost"],
-  secret_key_base: "D4o+pPYou6uQ6VFjxEVDdiNQcoGjlUy08PojqiKwO4HaYQzlGVmnXviph0Dny6Xs",
-  render_errors: [view: Web.ErrorView, accepts: ~w(json), layout: false],
-  pubsub_server: Web.PubSub,
-  live_view: [signing_salt: "jPv2BFBZ"]
-
-config :web,
-  ecto_repos: [Web.Repo],
+config :admin_api,
   generators: [context_app: false]
 
 # Configures the endpoint
-config :web, Web.Endpoint,
+config :admin_api, AdminApi.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "u+1uXYzipn1+AZfYDFosZl5VwdruAGRr4B1LI3rNNHo513Wk9Q0FlUvnDliNbFm6",
-  render_errors: [view: Web.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Web.PubSub,
-  live_view: [signing_salt: "vW9ivddh"]
+  secret_key_base: "ppV0I8nbcxFy+zgjwx8SXYRoOuuKF6jick4L+riE5MQqmWydYvkYKRBYvHINJprZ",
+  render_errors: [view: AdminApi.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: AdminApi.PubSub,
+  live_view: [signing_salt: "oGwxqv6q"]
 
-config :web,
-  ecto_repos: [LoyaltyApp.Repo],
+config :user_api,
   generators: [context_app: false]
 
 # Configures the endpoint
-config :web, LoyaltyApp.Endpoint,
+config :user_api, UserApi.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "dbvsuHG4lAvBo7ztF+NtqmM0KP70iXdO/ZJjGy5hoAbAkSHvhp2GHcuikhbmxSfG",
-  render_errors: [view: LoyaltyApp.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: LoyaltyApp.PubSub,
-  live_view: [signing_salt: "bq8xAMNE"]
-
-# Configure Mix tasks and generators
-config :web,
-  ecto_repos: [LoyaltyApp.Repo]
+  secret_key_base: "CRMy8p9Qkukda7yNFpSZvz0IafdAhsQd8Z/FBeHFiOBuxl1wnEseYJHdbCbuzahE",
+  render_errors: [view: UserApi.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: UserApi.PubSub,
+  live_view: [signing_salt: "oohJFD9J"]
 
 # Sample configuration:
 #
