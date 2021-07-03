@@ -16,6 +16,10 @@ You can find the diagram of an architecture at [here](./design/architecture.draw
 
 ![Docker](https://github.com/Zimtir/Loyalty-backend/blob/master/design/docker.jpg?raw=true)
 
+### Database map
+
+![Database](https://github.com/Zimtir/Loyalty-backend/blob/master/design/database.jpg?raw=true)
+
 ### Architecture map
 
 ![Architecture](https://github.com/Zimtir/Loyalty-backend/blob/master/design/architecture.jpg?raw=true)
