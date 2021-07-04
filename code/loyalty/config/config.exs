@@ -9,21 +9,13 @@
 # move said applications out of the umbrella.
 import Config
 
-config :database, Transactions.Repo,
-  database: "database_repo",
-  username: "user",
-  password: "pass",
-  hostname: "localhost"
-
-config :database, Users.Repo,
-  database: "database_repo",
-  username: "user",
-  password: "pass",
-  hostname: "localhost"
-
 # Configure Mix tasks and generators
 config :database,
-  ecto_repos: [Database.Repo]
+  ecto_repos: [Database.Repo],
+  database: "database_repo",
+  username: "user",
+  password: "pass",
+  hostname: "localhost"
 
 config :admin_api,
   generators: [context_app: false]

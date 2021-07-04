@@ -9,7 +9,9 @@ config :database, Database.Repo,
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10,
-  ecto_repos: [Database.Transactions.Repo, Database.Users.Repo]
+  ecto_repos: [Database.Transactions.Repo, Database.Users.Repo],
+  migration_primary_key: [name: :uuid, type: :binary_id],
+  migration_foreign_key: [column: :uuid, type: :binary_id]
 
 config :admin_api, AdminApi.Endpoint,
   http: [port: 4001],
